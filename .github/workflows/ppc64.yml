@@ -1,6 +1,13 @@
 name: PowerPC
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - "**/CMakeLists.txt"
+      - "**.cmake"
+      - "**.c"
+      - ".github/workflows/ppc64.yml"
+  pull_request:
 
 jobs:
   powerpc:
